@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Обо мне — Сайт короля всего мира{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center mb-4">Обо мне</h1>
+
+<div class="text-center mb-4">
+    <img src="{{ url_for('static', filename='images/my_photo2.jpg') }}"
+         alt="Моё фото"
+         class="img-fluid rounded shadow"
+         style="max-width: 250px;">
+</div>
+
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+    <p class="lead">Меня зовут Иван, мне 25 лет, живу в Москве.</p>
+    <p>
+        Этот текст полностью заменяемый. Расскажите о себе: образование,
+        работа, хобби, интересы. Можно разбить на несколько абзацев.
+    </p>
+    <p>
+        В свободное время учу программированию, читаю книги и гуляю с собакой.
+        Люблю решать задачи на Python и делать небольшие проекты.
+    </p>
+</div>
+
+<div class="text-center mt-5">
+    <h3>Мои навыки</h3>
+    <ul class="list-unstyled">
+        <li>Python (базовый уровень)</li>
+        <li>HTML и CSS</li>
+        <li>Flask</li>
+        <li>Работа с Git и GitHub</li>
+    </ul>
+</div>
+
+<div class="text-center mt-4">
+    <h3>Что я хочу освоить</h3>
+    <ul class="list-unstyled">
+        <li>Базы данных (SQLite, PostgreSQL)</li>
+        <li>JavaScript</li>
+        <li>Развёртывание сайтов на сервере</li>
+    </ul>
+</div>
+
+{% endblock %}

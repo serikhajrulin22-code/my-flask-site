@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Сайт короля всего мира{% endblock %}
+
+{% block content %}
+
+<div class="d-flex flex-column align-items-center text-center mb-5">
+    <img src="{{ url_for('static', filename='images/image.jpg') }}"
+         alt="Моё фото"
+         class="img-fluid rounded shadow mb-4"
+         style="max-width: 280px;">
+    <h1 class="display-5 fw-bold">Привет, меня зовут Иван!</h1>
+    <p class="lead" style="max-width: 600px;">
+        Это мой личный сайт. Я изучаю Python и Flask,
+        и вот результат — адаптивный сайт, который открывается и с телефона.
+    </p>
+    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg mt-2">Написать мне</a>
+</div>
+
+<div class="text-center mb-5">
+    <h2 class="mb-3">Немного обо мне</h2>
+    <p style="max-width: 700px; margin: 0 auto;">
+        Здесь можно рассказать о себе: чем занимаетесь, что любите, что умеете.
+        Просто замените этот текст на свой.
+    </p>
+    <p style="max-width: 700px; margin: 16px auto 0;">
+        Например: «Я учусь программировать на Python уже полгода, люблю делать сайты
+        и разбираться в новых технологиях. Мечтаю стать разработчиком.»
+    </p>
+</div>
+
+<h2 class="mt-5 mb-4 text-center">Чем я могу быть полезен</h2>
+<div class="row g-4">
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+            <div class="card-body">
+                <h5 class="card-title">🎯 Моя цель</h5>
+                <p class="card-text">
+                    Расскажите здесь о своей цели. Например: «Создавать удобные
+                    сайты, которые помогают людям».
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+            <div class="card-body">
+                <h5 class="card-title">💡 Навыки</h5>
+                <p class="card-text">
+                    Перечислите навыки: Python, HTML, CSS, работа с Flask.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+            <div class="card-body">
+                <h5 class="card-title">📬 Связаться</h5>
+                <p class="card-text">
+                    Есть вопрос? Напишите мне через форму на странице «Контакты».
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

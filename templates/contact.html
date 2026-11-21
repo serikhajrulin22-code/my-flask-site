@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты — Сайт короля всего мира{% endblock %}
+
+{% block content %}
+
+<h1>Контакты</h1>
+
+<p class="lead">
+    Заполните форму ниже — сообщение придёт мне на сервер (пока просто
+    выводится в консоль). Здесь можно написать что угодно про то, как с вами
+    связаться.
+</p>
+
+<div class="row">
+    <div class="col-12 col-lg-6">
+        <form method="POST" action="{{ url_for('contact') }}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email для связи</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+
+    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+        <h3>Как со мной ещё связаться</h3>
+        <ul class="list-unstyled">
+            <li class="mb-2">📧 Email: <a href="mailto:you@example.com">you@example.com</a></li>
+            <li class="mb-2">📱 Telegram: <a href="https://t.me/ваш_ник">@ваш_ник</a></li>
+            <li class="mb-2">💬 ВКонтакте: <a href="https://vk.com/ваша_страница">ваша_страница</a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
